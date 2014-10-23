@@ -32,9 +32,9 @@ module SimpleLogin
       end
 
       def insert_routes
-        route("match 'signup', to: 'users#new', as: 'signup'")
-        route("match 'login', to: 'sessions#new', as: 'login'")
-        route("match 'logout', to: 'sessions#destroy', as: 'logout'")
+        route("get 'signup', to: 'users#new', as: 'signup'")
+        route("get 'login', to: 'sessions#new', as: 'login'")
+        route("get 'logout', to: 'sessions#destroy', as: 'logout'")
         route("resources :users")
         route("resources :sessions")
         route("resources :password_resets")
